@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:network_request/model/person.dart';
+import 'package:network_request/model/person_model.dart';
 import 'package:network_request/services/person_network_service.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -18,8 +18,8 @@ class HomeScreen extends StatelessWidget {
         child: SafeArea(
           child: FutureBuilder(
             future: personService.fetchPersons(100),
-            builder:
-                (BuildContext context, AsyncSnapshot<List<Person>> snapshot) {
+            builder: (BuildContext context,
+                AsyncSnapshot<List<PersonModel>> snapshot) {
               if (snapshot.hasData) {
                 return Row(
                   children: <Widget>[
@@ -33,13 +33,13 @@ class HomeScreen extends StatelessWidget {
                                 var currentPerson = snapshot.data[index];
 
                                 return ListTile(
-                                  title: Text(currentPerson.name),
+                                  title: Text(currentPerson.email),
                                   leading: CircleAvatar(
-                                    backgroundImage:
-                                        NetworkImage(currentPerson.imageUrl),
+                                    backgroundImage: NetworkImage(
+                                        currentPerson.picture.thumbnail),
                                   ),
-                                  subtitle: Text(
-                                      "Phone: ${currentPerson.phoneNumber}"),
+                                  subtitle:
+                                      Text("Phone: ${currentPerson.phone}"),
                                 );
                               }),
                         ),
