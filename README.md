@@ -6,9 +6,9 @@ This repository is for my youtube tutorial about network requests.
 
 You can find the youtube videos here:
 * [Basic Network Request](https://www.youtube.com/watch?v=hz2LQ43muio)
-* [Json Serializer]()
+* [Json Serializer](https://www.youtube.com/watch?v=gYoQAA7rVVc&t=3s)
 
 Medium Article to this tutorial
-* [Coming Soon](https://medium.com/@myracledesign)
+* [Step-by-Step Guide JSON Serializer](https://itnext.io/step-by-step-guide-for-flutter-json-serialization-fd5acd5e7521)
 
 This is a branch based tutorial, so for every tutorial you will find its own branch.
